@@ -227,7 +227,8 @@
     class="theme-page theme-page--has-banner"
     data-controller="load-mathjax"
   >
-      <header class="argyle-header">
+    <!--<header class="argyle-header">-->
+      <header class="argyle-header" style="background-image: url('SWOT_pass_cropped_oneswath.png'); background-size: cover; background-position: center; position: relative;">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -242,7 +243,7 @@
               data-site-editable-id="site_title"
             >
               <h1>
-                <a href="index.html">Bjarke Nilsson</a>
+                <a href="index.html" style="color: white;">Bjarke Nilsson</a>
               </h1>
             </div>
             <div class="flex-0" style="width: 16px"></div>
@@ -266,17 +267,27 @@
     <div class="theme-navlinks2-item-wrap">
 
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="index.html">Home</a>
+        <a class="theme-navlinks2-item-link" href="index.html" style="color: black; font-weight: bold;">Home</a>
 </div>
 </div>    <div class="theme-navlinks2-item-wrap">
 
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="publications.html">Publications</a>
+        <a class="theme-navlinks2-item-link" href="research.html" style="color: black; font-weight: bold;">Research</a>
 </div>
 </div>    <div class="theme-navlinks2-item-wrap">
 
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="CV_BNilsson.pdf" download="CV_BNilsson.pdf">CV</a>
+        <a class="theme-navlinks2-item-link" href="publications.html" style="color: black; font-weight: bold;">Publications</a>
+</div>
+</div>    <div class="theme-navlinks2-item-wrap">
+
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="CV_BNilsson.pdf" download="CV_BNilsson.pdf" style="color: black; font-weight: bold;">CV</a>
+</div>
+</div>    <div class="theme-navlinks2-item-wrap">
+
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="illustration.html" style="color: black; font-weight: bold;">Visualisation</a>
 
 </div>
 </div></div>
@@ -290,8 +301,9 @@
 
 
       
-<div class="argyle-banner" style="position: relative;">
-  <picture style="  object-fit: cover;
+<div class="argyle-banner" style="position: relative; max-height: 200px;">
+  <picture style="  object-fit: contain;
+  object-position: center top;
   position: absolute; top: 0; right: 0; bottom: 0; left: 0;
   height: 100%;
   width: 100%;
@@ -300,8 +312,9 @@
     <source
     />
     <img 
-      src="ocean_small.jpg"
-      style="  object-fit: cover;
+      src="SWOT_pass_cropped_otherswath.png"
+      style="  object-fit: contain;
+  object-position: center top;
   position: absolute; top: 0; right: 0; bottom: 0; left: 0;
   height: 100%;
   width: 100%;
@@ -312,6 +325,7 @@
 
   <div
     style="
+      object-position: center top;
       position: absolute; top: 0; right: 0; bottom: 0; left: 0;
       height: 100%;
       width: 100%;
@@ -320,19 +334,21 @@
     "
   ></div>
 
-  <picture style="  object-fit: cover;
+  <picture style="  object-fit: contain;
+  object-position: center top;
   position: absolute; top: 0; right: 0; bottom: 0; left: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
 ">
-    <source srcset="SWOT_pass.png" />
-    <img style="  object-fit: cover;
+    <source srcset="SWOT_pass_cropped_otherswath.png" />
+    <img style="  object-fit: contain;
+    object-position: center top;
   position: absolute; top: 0; right: 0; bottom: 0; left: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
-" alt="Banner image" src="SWOT_pass.png" />
+" alt="Banner image" src="SWOT_pass_cropped_otherswath.png" />
 </picture>
 
   
@@ -529,8 +545,33 @@
       <div class="theme-content-title">
       <h1 class="blt-h2 blt-weight-bold">Bjarke Nilsson</h1>
       <hr class="space-12">
-      <p class="blt-h4">
-        Bigger text
+      <p class="blt-h5">
+        I am a PhD student at the Department of Geodesy and Earth Observation at DTU Space, just north of Copenhagen, Denmark where i live. 
+        I am a part of the <a
+          style="color: var(--theme-link-color); font-weight: 700; text-decoration: none;"
+          href="https://www.space.dtu.dk/english/research-divisions/geodesy-and-earth-observation/research-areas/hydrosphere"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hydrosphere research group
+        </a>, with Ole Baltazar Andersen and Per Knudsen as my supervisors.
+        I did my master's degree with a specialization in Earth Observations at the Technical University of Denmark (DTU) where i also did my bachelor's.<br><br>
+
+        My research focuses on the processing and use of <a
+          style="color: var(--theme-link-color); font-weight: 700; text-decoration: none;"
+          href="research.html"
+        >
+          satellite data
+        </a> (primarily altimetry) for geodetic and oceanographic applications.
+        This includes work on public accessible data and maps, such as global <a
+          style="color: var(--theme-link-color); font-weight: 700; text-decoration: none;"
+          href="research.html"
+        >
+          bathymetry (global seafloor depth), marine gravity and mean sea surface (global sea level)
+        </a>.
+        Additionally focus on the application of satellite altimetry for oceanographic applications are of interest.
+
+
       </p>
   </div>
 
@@ -539,36 +580,38 @@
 
   
   
-  <div
+<div
     class="theme-blocks"
     id="block-column-default"
   >
-          <div id="block-wbsN" class="theme-block">
+        <div id="block-wbsN" class="theme-block">
+
+        <div class="blt-h3 blt-weight-bold">News</div>
+
         
-    
-        <div class="trix-content theme-trix-content" dir="auto">    smaller text<br><br>
-</div>
-</div>
+        <div class="blt-h5 blt-weight-bold"></div>
 
-<iframe
-  width="448"
-  height="252"
-  src="https://www.youtube.com/embed/QmhUJs27BCw"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen>
-</iframe>
+        <a
+          style="color: var(--theme-link-color); font-weight: 700; text-decoration: none;"
+          href="https://scripps.ucsd.edu/news/new-satellites-observations-close-blind-spot-tsunami-science"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          SWOT detects tsunami from Kamchatka earthquake
+        </a>
+        <div class="blt-weight-normal">When a magnitude 8.8 earthquake struck off Russia’s Kamchatka Peninsula on July 29, 2025, it generated a tsunami that raced across the Pacific, with waves reaching more than 17 meters (55 feet) above sea level in the Russian coastal town of Severo-Kurilsk. 
+        The findings, published March 26 in the journal Science, could help scientists build more accurate models of how major earthquakes generate tsunamis and eventually inform coastal hazard preparedness.</div><br><br>
+  <iframe
+    width="448"
+    height="252"
+    src="https://www.youtube.com/embed/QmhUJs27BCw"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
 
-
-</div>
-          <div id="block-n6A4" class="theme-block">
-        
-    
-  <div class="flex flex-row">
-    Inspired by https://robertavaltorta.research.st
-  </div>
 
 
 
@@ -600,6 +643,9 @@
     <hr class="space-lg">
 
     </div>
+  <div class="flex flex-row">
+    Inspired by https://robertavaltorta.research.st
+  </div>
 
     <hr class="space-lg">
   </div>

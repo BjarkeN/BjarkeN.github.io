@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="turbo-cache-control" content="no-cache">
+
+  <title>Bjarke Nilsson</title>
+<link rel="icon" type="image/png" href="bathymetry_pacific_transparent.png" sizes="96x96">
+
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="stekqkac5xMr0hE03gxCSgiObt1C9wQx6qhQY1oqk_65YwIHXWQtuGBmObhMZSHhhPnyvT6rHLthUzoW0_zNCA" />
+
+  <!-- Preload -->
+  
+
+  <!-- Fonts -->
+  <style>
+  /* https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap */
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-400-1.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-400-2.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-400-3.woff2') format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-400-4.woff2') format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-400-5.woff2') format('woff2');
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-400-6.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-400-7.woff2') format('woff2');
+  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-400-8.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-700-9.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-700-10.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-700-11.woff2') format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-700-12.woff2') format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-700-13.woff2') format('woff2');
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-700-14.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-700-15.woff2') format('woff2');
+  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/google-fonts/Open_Sans-700-16.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+</style>
+
+
+  
+  
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="themes-2XL-4_eJ.css" media="all" data-turbo-track="reload" />
+  <link rel="stylesheet" href="themes-argyle-Cu1OJXw7.css" media="all" data-turbo-track="reload" />
+    <style>
+
+    :root {
+      --blt-font-base: Open Sans, sans-serif;
+      --theme-link-color: #b12b32;
+      --theme-header-background-color: #f0f0f0;
+      --theme-header-text-color: #212121;
+      --theme-header-link-color: #212121;
+      --theme-footer-background-color: #f0f0f0;
+      --theme-footer-text-color: #212121;
+      --theme-footer-link-color: #212121;
+    }
+  </style>
+
+  
+  <!-- Theme Javascript-->
+  <script src="themes-BwI_kM1R.js" crossorigin="anonymous" type="module" data-turbo-track="reload" defer="defer"></script><link rel="modulepreload" href="/vite/assets/lazyload.esm-CP1WlR6v.js" as="script" crossorigin="anonymous" data-turbo-track="reload" defer="defer">
+
+  
+</head>
+<body data-controller="">
+  
+
+  <div
+    class="theme-page theme-page--has-banner"
+    data-controller="load-mathjax"
+  >
+    <!--<header class="argyle-header">-->
+      <header class="argyle-header" style="background-image: url('SWOT_pass_cropped_oneswath.png'); background-size: cover; background-position: center; position: relative;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div
+            class="flex flex-row"
+            data-controller="overflow-nav"
+            data-overflow-nav-links-item-selector-value=".argyle-navlinks2-bar .theme-navlinks2-item-wrap"
+            data-overflow-nav-menu-item-selector-value=".argyle-navlinks2-menu .theme-navlinks2-item-wrap"
+          >
+            <div
+              class="flex-0"
+              data-site-editable-id="site_title"
+            >
+              <h1>
+                <a href="index.html" style="color: white;">Bjarke Nilsson</a>
+              </h1>
+            </div>
+            <div class="flex-0" style="width: 16px"></div>
+
+            
+  <div
+    class="flex-1 flex-row"
+    data-site-editable-id="navpages"
+    data-overflow-nav-target="linksContainer"
+    style="
+      /* Set to 0, so that the flex item shrinks past its initial size
+      * https://dfmcphee.com/flex-items-and-min-width-0/ */
+      min-width: 0;
+    "
+  >
+    <div class="argyle-navlinks2-bar">
+          <div
+  class="theme-navlinks2"
+  data-site-editable-id="navpages"
+>
+    <div class="theme-navlinks2-item-wrap">
+
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="index.html" style="color: black; font-weight: bold;">Home</a>
+</div>
+</div>    <div class="theme-navlinks2-item-wrap">
+
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="research.html" style="color: black; font-weight: bold;">Research</a>
+</div>
+</div>    <div class="theme-navlinks2-item-wrap">
+
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="publications.html" style="color: black; font-weight: bold;">Publications</a>
+</div>
+</div>    <div class="theme-navlinks2-item-wrap">
+
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="CV_BNilsson.pdf" download="CV_BNilsson.pdf" style="color: black; font-weight: bold;">CV</a>
+</div>
+</div>    <div class="theme-navlinks2-item-wrap">
+
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="illustration.html" style="color: black; font-weight: bold;">Visualisation</a>
+
+</div>
+</div></div>
+
+
+    </div>
+  </div>
+
+
+  </header>
+
+
+      
+
+  
+</div>
+
+    <main class="argyle-main">
+      <div class="container">
+        <div class="row">
+          <div class="hidden-sm-down col-md-4 col-lg-3">
+              <div class="argyle-sidebar hidden-sm-down">
+      <div class="argyle-site-picture-frame" style="margin-bottom: 24px;" data-site-editable-id="site_picture">
+    <div
+      style="
+        position: relative;
+        display: block;
+        padding: 100% 0 0;
+      "
+    >
+    </div>
+</div>
+      <div data-site-editable-id="contact">
+    <hr class="space-sm">
+  </div>
+
+      <div data-site-editable-id="contact">
+        <p class="blt-p">
+          Overview of my research interests and current and past projects
+        </p>
+
+      <hr class="space-md" />
+  </div>
+
+<hr class="space-md">
+
+  </div>
+
+          </div>
+          <div class="col-xs-12 col-md-8 col-lg-9">
+                <div class="argyle-contact-mobile">
+      <div class="argyle-site-picture-frame" style="" data-site-editable-id="site_picture">
+    <div
+      class="theme-site-avatar-picture"
+      style="
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        padding: 100% 0 0;
+        background-color: #ccc;
+      "
+    >
+      <img
+        src="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf"
+        srcset="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf 1x, https://spaces-cdn.owlstown.com/blobs/8vjqbat7vppy66738d3q0xq8j734 2x"
+        style="
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+        "
+        alt="Site avatar"
+      />
+    </div>
+</div>
+
+      <div
+        class="blt-h2 blt-weight-bold"
+        data-site-editable-id="contact"
+      >
+        Bjarke Nilsson
+      </div>
+
+      <div class="blt-h4">
+        PhD Student
+      </div>
+
+      <hr class="space-12">
+  <div
+      class="contact-modal"
+      data-controller="modal">
+    <div class="theme-btn"
+        data-action="click->modal#show">
+      Contact
+    </div>
+    <div class="contact-modal__content">
+        <div class="" style="margin-bottom: 12px;" data-site-editable-id="site_picture">
+    <div
+      class="theme-site-avatar-picture"
+      style="
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        padding: 100% 0 0;
+        background-color: #ccc;
+      "
+    >
+      <img
+        src="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf"
+        srcset="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf 1x, https://spaces-cdn.owlstown.com/blobs/8vjqbat7vppy66738d3q0xq8j734 2x"
+        style="
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+        "
+        alt="Site avatar"
+      />
+    </div>
+</div>
+<hr class="space-md">
+
+    </div>
+    <div
+      class="contact-modal__overlay"
+      data-action="click->modal#hide">
+    </div>
+  </div>
+
+  </div>
+
+  <hr class="space-lg hidden-md-up">
+    
+    
+      <div class="theme-content-title">
+      <h1 class="blt-h1 blt-weight-bold">Research</h1>
+      <hr class="space-12">
+      <p class="blt-h4">
+        Overview of my research interests and current and past projects. <br>
+
+        Page unfinished
+      </p>
+  </div>
+
+    <hr class="space-md">
+
+
+  
+<div
+    class="theme-blocks"
+    id="block-column-default"
+  >
+        <div id="block-wbsN" class="theme-block">
+        <div class="blt-h3 blt-weight-bold">Satellite Altimetry</div>
+        <div class="blt-weight-normal">smaller text</div><br><br>
+
+        <div class="blt-h3 blt-weight-bold">Marine Geodesy</div>
+        <div class="blt-weight-normal">smaller text</div><br><br>
+
+
+        <div class="blt-h3 blt-weight-bold">Bathymetry</div>
+        <div class="blt-weight-normal">smaller text</div><br><br>
+
+        <div class="blt-h3 blt-weight-bold">Machine Learning</div>
+        <div class="blt-weight-normal">smaller text</div><br><br>
+
+        <div class="blt-h3 blt-weight-bold">Oceanography</div>
+        <div class="blt-weight-normal">smaller text</div><br><br>
+
+        <div class="blt-h3 blt-weight-bold">Other</div>
+        <div class="blt-weight-normal">smaller text</div><br><br>
+
+
+
+    
+
+
+
+</div>
+  </div>
+
+
+
+
+            <div class="space-xl"></div>
+
+<div
+  class="theme-sharer"
+  data-site-editable-id="sharer"
+>
+  
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <hr class="space-xl">
+
+<footer class="argyle-footer">
+  <div class="container">
+    <hr class="space-lg">
+
+    </div>
+
+    <hr class="space-lg">
+  </div>
+</footer>
+
+</body>
+</html>
